@@ -24,6 +24,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         // TODO: ZCL 2018/12/20  1111
+
     }
 
     private void rxStudent(Student[] students) {
@@ -76,6 +77,7 @@ public class MainActivity extends AppCompatActivity {
 
 
     class Student {
+        // TODO: ZCL 2018/12/20    1111
         private String name;
         private List<Course> coursesList;
 
@@ -84,6 +86,7 @@ public class MainActivity extends AppCompatActivity {
             this.coursesList = coursesList;
         }
 
+        // TODO: ZCL 2018/12/20   1111
         public List<Course> getCoursesList() {
             return coursesList;
         }
@@ -94,6 +97,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     class Course {
+        // TODO: ZCL 2018/12/20 1111 
         private String name;
 
         public Course(String name) {
