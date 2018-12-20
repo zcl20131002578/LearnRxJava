@@ -27,6 +27,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void rxStudent(Student[] students) {
+        // TODO: ZCL 2018/12/20  222222
         Subscriber<Course> courseSubscriber = new Subscriber<Course>() {
             @Override
             public void onNext(Course course) {
@@ -76,6 +77,7 @@ public class MainActivity extends AppCompatActivity {
 
 
     class Student {
+        // TODO: ZCL 2018/12/20  222222
         private String name;
         private List<Course> coursesList;
 
@@ -94,6 +96,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     class Course {
+        // TODO: ZCL 2018/12/20  222222
         private String name;
 
         public Course(String name) {
