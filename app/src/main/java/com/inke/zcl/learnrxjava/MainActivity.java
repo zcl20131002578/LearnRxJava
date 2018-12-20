@@ -33,13 +33,13 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        // TODO: ZCL 2018/12/20 add in master 
         linearLayout = findViewById(R.id.root_view);
         imageView = findViewById(R.id.img);
         textView = findViewById(R.id.text);
         Log.d(TAG, "onCreate: linearLayout VISIBLE:" + (linearLayout.getVisibility() == View.VISIBLE));
         Log.d(TAG, "onCreate: imageView VISIBLE:" + (imageView.getVisibility() == View.VISIBLE));
         Log.d(TAG, "onCreate: textView VISIBLE:" + (textView.getVisibility() == View.VISIBLE));
-
     }
 
 
