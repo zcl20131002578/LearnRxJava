@@ -33,7 +33,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        // TODO: ZCL 2018/12/20 add in master 
+        // TODO: ZCL 2018/12/20
         linearLayout = findViewById(R.id.root_view);
         imageView = findViewById(R.id.img);
         textView = findViewById(R.id.text);
