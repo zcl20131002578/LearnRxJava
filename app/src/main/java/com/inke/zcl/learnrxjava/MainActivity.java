@@ -1,15 +1,9 @@
 package com.inke.zcl.learnrxjava;
 
-import android.annotation.SuppressLint;
-import android.content.Context;
-import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
-import android.widget.ImageView;
-import android.widget.LinearLayout;
-import android.widget.TextView;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -24,24 +18,13 @@ import rx.functions.Func1;
 public class MainActivity extends AppCompatActivity {
 
     private static final String TAG = "ZCLZCL";
-    private LinearLayout linearLayout;
-    private ImageView imageView;
-    private TextView textView;
 
-    @SuppressLint("CommitPrefEdits")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         // TODO: ZCL 2018/12/20
-        linearLayout = findViewById(R.id.root_view);
-        imageView = findViewById(R.id.img);
-        textView = findViewById(R.id.text);
-        Log.d(TAG, "onCreate: linearLayout VISIBLE:" + (linearLayout.getVisibility() == View.VISIBLE));
-        Log.d(TAG, "onCreate: imageView VISIBLE:" + (imageView.getVisibility() == View.VISIBLE));
-        Log.d(TAG, "onCreate: textView VISIBLE:" + (textView.getVisibility() == View.VISIBLE));
     }
-
 
     private void rxStudent(Student[] students) {
         Subscriber<Course> courseSubscriber = new Subscriber<Course>() {
