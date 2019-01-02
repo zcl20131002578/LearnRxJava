@@ -23,11 +23,11 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        // TODO: ZCL 2018/12/20  222222
+
     }
 
     private void rxStudent(Student[] students) {
-        // TODO: ZCL 2018/12/20  222222
+
         Subscriber<Course> courseSubscriber = new Subscriber<Course>() {
             @Override
             public void onNext(Course course) {
@@ -85,7 +85,7 @@ public class MainActivity extends AppCompatActivity {
             this.coursesList = coursesList;
         }
 
-        // TODO: ZCL 2018/12/20   1111
+
         public List<Course> getCoursesList() {
             return coursesList;
         }
