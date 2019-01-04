@@ -1,7 +1,5 @@
 <resources>
     <string name="app_name">LearnRxJava</string>
-
-
-    <string name="added_in_master_v1.1">added_in_master_v1.1</string>
+    <string name="move_me">move_me</string>
 
 </resources>

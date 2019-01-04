@@ -1,39 +1,40 @@
-package com.inke.zcl.learnrxjava.view;
+package com.inke.zcl.learnrxjava.view.customview;
 
 import android.content.Context;
-import android.os.Looper;
 import android.util.AttributeSet;
 import android.util.Log;
 import android.view.GestureDetector;
-import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
-import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.inke.zcl.learnrxjava.R;
+import com.inke.zcl.learnrxjava.view.CustomFatherView;
 
-import java.util.logging.Logger;
 
-
-public class MyCustomView extends LinearLayout implements GestureDetector.OnGestureListener, GestureDetector.OnDoubleTapListener {
+public class CustomLocaView extends CustomFatherView implements GestureDetector.OnGestureListener, GestureDetector.OnDoubleTapListener {
 
     public static final String TAG = "MyCustomView";
     private GestureDetector gestureDetector;
     private TextView text_view;
 
-    public MyCustomView(Context context) {
+    public CustomLocaView(Context context) {
         super(context);
         init();
     }
 
-    public MyCustomView(Context context, AttributeSet attrs) {
+    public CustomLocaView(Context context, AttributeSet attrs) {
         super(context, attrs);
         init();
     }
 
-    private void init() {
-        LayoutInflater.from(getContext()).inflate(R.layout.my_custom_view, this);
+    @Override
+    protected int getLayoutId() {
+        return R.layout.custom_loca_view;
+    }
+
+    @Override
+    protected void init() {
         gestureDetector = new GestureDetector(getContext(), this);
         text_view = findViewById(R.id.text_view);
         text_view.setOnClickListener(this::callOnClick);
@@ -41,11 +42,15 @@ public class MyCustomView extends LinearLayout implements GestureDetector.OnGest
 
     }
 
-    private void callOnClick(View view) {
-        Log.d(TAG, "callOnClick: ");
-        Log.d(TAG, "text_view:" + "scrolledX:" + text_view.getScrollX() + " scrolledY:" + text_view.getScrollY());
-        Log.d(TAG, "text_view:" + "l:" + text_view.getLeft() + " r:" + text_view.getRight() + " t:" + text_view.getTop() + " b:" + text_view.getBottom());
-        Log.d(TAG, "text_view:" + "x:" + text_view.getX() + " y: " + text_view.getY() + " translationX: " + text_view.getTranslationX() + " translationY:" + text_view.getTranslationY());
+    @Override
+    protected void callOnClick(View view) {
+        switch (view.getId()) {
+            case R.id.text_view:
+                insideTextLocatInfo();
+                break;
+            default:
+                break;
+        }
     }
 
     //**********************************接管onTouchEvent方法************************************//
@@ -115,15 +120,23 @@ public class MyCustomView extends LinearLayout implements GestureDetector.OnGest
     protected void onScrollChanged(int l, int t, int oldl, int oldt) {
         super.onScrollChanged(l, t, oldl, oldt);
         Log.d(TAG, "//*****************************START*****************************************//");
-        Log.d(TAG, "onScrollChanged: l:" + l + " t:" + t + " oldl:" + oldl + " oldt:" + oldt);
+        currentLocaInfo();
+        Log.d(TAG, "//**********************************************************************//");
+        insideTextLocatInfo();
+        Log.d(TAG, "//*****************************END*****************************************//");
+    }
+
+
+    public void currentLocaInfo() {
         Log.d(TAG, "scrolledX:" + getScrollX() + " scrolledY:" + getScrollY());
         Log.d(TAG, "l:" + getLeft() + " r:" + getRight() + " t:" + getTop() + " b:" + getBottom());
         Log.d(TAG, "x:" + getX() + " y: " + getY() + " translationX: " + getTranslationX() + " translationY:" + getTranslationY());
-        Log.d(TAG, "//**********************************************************************//");
+    }
+
+    public void insideTextLocatInfo() {
         Log.d(TAG, "text_view: vis: " + (text_view.getVisibility() == View.VISIBLE));
         Log.d(TAG, "text_view:" + "scrolledX:" + text_view.getScrollX() + " scrolledY:" + text_view.getScrollY());
         Log.d(TAG, "text_view:" + "l:" + text_view.getLeft() + " r:" + text_view.getRight() + " t:" + text_view.getTop() + " b:" + text_view.getBottom());
         Log.d(TAG, "text_view:" + "x:" + text_view.getX() + " y: " + text_view.getY() + " translationX: " + text_view.getTranslationX() + " translationY:" + text_view.getTranslationY());
-        Log.d(TAG, "//*****************************END*****************************************//");
     }
 }
