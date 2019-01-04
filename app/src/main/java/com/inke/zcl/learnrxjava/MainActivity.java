@@ -4,26 +4,45 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.view.ViewGroup;
+import android.widget.FrameLayout;
 
-import java.util.ArrayList;
+import com.inke.zcl.learnrxjava.view.MyCustomView;
+
 import java.util.List;
 
 import rx.Observable;
 import rx.Subscriber;
-import rx.functions.Action0;
-import rx.functions.Action1;
-import rx.functions.Action3;
 import rx.functions.Func1;
 
 public class MainActivity extends AppCompatActivity {
 
-    private static final String TAG = "ZCLZCL";
+    private static final String TAG = "MainActivity";
+    private MyCustomView myCustomView;
+    private int mT = 50;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        myCustomView = findViewById(R.id.my_custom_view);
 
+        findViewById(R.id.click).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Log.d(TAG, "onClick scrolledX:" + myCustomView.getScrollX() + " scrolledY:" + myCustomView.getScrollY());
+                mT += 10;
+                myCustomView.scrollBy(mT, 0);
+                Log.d(TAG, "onClick scrolledX:" + myCustomView.getScrollX() + " scrolledY:" + myCustomView.getScrollY());
+
+            }
+        });
+        findViewById(R.id._click).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                myCustomView.scrollBy(-100, -100);
+            }
+        });
     }
 
     private void rxStudent(Student[] students) {
