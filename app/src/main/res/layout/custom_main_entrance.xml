@@ -11,8 +11,12 @@
         android:layout_height="200dp"
         android:layout_gravity="center"
         android:gravity="center"
-        android:visibility="visible"
+        android:visibility="gone"
         tools:visibility="visible" />
+
+    <com.inke.zcl.learnrxjava.view.customview.CustomMove
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
 
     <LinearLayout
         android:layout_width="wrap_content"

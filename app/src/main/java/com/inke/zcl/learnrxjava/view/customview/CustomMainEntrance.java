@@ -15,6 +15,7 @@ import com.inke.zcl.learnrxjava.view.CustomFatherView;
 
 import static android.os.Looper.getMainLooper;
 
+
 /**
  * 自定义View测试的主View
  */
@@ -41,6 +42,7 @@ public class CustomMainEntrance extends CustomFatherView {
     protected void init() {
         customLocaView = findViewById(R.id.my_custom_view);
         handler = new Handler(getMainLooper());
+
         findViewById(R.id.click).setOnClickListener(this::callOnClick);
         findViewById(R.id._click).setOnClickListener(this::callOnClick);
     }

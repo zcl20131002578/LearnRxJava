@@ -11,7 +11,9 @@ import android.widget.TextView;
 import com.inke.zcl.learnrxjava.R;
 import com.inke.zcl.learnrxjava.view.CustomFatherView;
 
-
+/**
+ * 自定义View
+ */
 public class CustomLocaView extends CustomFatherView implements GestureDetector.OnGestureListener, GestureDetector.OnDoubleTapListener {
 
     public static final String TAG = "MyCustomView";

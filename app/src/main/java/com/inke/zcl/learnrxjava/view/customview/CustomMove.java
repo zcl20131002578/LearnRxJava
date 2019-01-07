@@ -13,8 +13,9 @@ import com.inke.zcl.learnrxjava.view.CustomFatherView;
 
 public class CustomMove extends CustomFatherView {
 
-    public static final String TAG = "MyRemoveWithPoint";
-    int lastX = 0, lastY = 0;
+    public static final String TAG = "CustomMove";
+    int lastX = 0;
+    int lastY = 0;
     private TextView move_me_text;
 
     public CustomMove(Context context) {
