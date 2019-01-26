@@ -4,7 +4,16 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <!--View move-->
     <com.inke.zcl.learnrxjava.view.customview.CustomMainEntrance
         android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone" />
+
+    <!--事件View-->
+    <com.inke.zcl.learnrxjava.view.eventview.EventView
+        android:layout_width="match_parent"
         android:layout_height="match_parent" />
+
+
 </FrameLayout>

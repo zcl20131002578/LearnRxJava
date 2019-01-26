@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:clipChildren="false">
+
+
+    <FrameLayout
+        android:id="@+id/event_root_view"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:layout_gravity="top"
+        android:background="@android:color/holo_blue_bright">
+
+        <View
+            android:id="@+id/event_center"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:background="@android:color/holo_green_light" />
+
+        <View
+            android:id="@+id/event_top"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:background="@android:color/darker_gray" />
+
+    </FrameLayout>
+
+</FrameLayout>

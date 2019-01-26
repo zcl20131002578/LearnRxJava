@@ -14,8 +14,8 @@ import com.inke.zcl.learnrxjava.view.CustomFatherView;
 public class CustomMove extends CustomFatherView {
 
     public static final String TAG = "CustomMove";
-    int lastX = 0;
-    int lastY = 0;
+    float lastX = 0;
+    float lastY = 0;
     private TextView move_me_text;
 
     public CustomMove(Context context) {
@@ -41,17 +41,17 @@ public class CustomMove extends CustomFatherView {
 
     @Override
     public boolean onTouchEvent(MotionEvent event) {
-        int x = (int) event.getRawX();
-        int y = (int) event.getRawY();
+        float x = event.getRawX();
+        float y = event.getRawY();
 
         switch (event.getAction()) {
             case MotionEvent.ACTION_DOWN:
                 break;
             case MotionEvent.ACTION_MOVE:
-                int moveTranslationX = x - lastX;
-                int moveTranslationY = y - lastY;
-                int currentTranslationX = (int) (getTranslationX() + moveTranslationX);
-                int currentTranslationY = (int) (getTranslationY() + moveTranslationY);
+                float moveTranslationX = x - lastX;
+                float moveTranslationY = y - lastY;
+                float currentTranslationX = getTranslationX() + moveTranslationX;
+                float currentTranslationY = getTranslationY() + moveTranslationY;
                 setTranslationX(currentTranslationX);
                 setTranslationY(currentTranslationY);
                 Log.d(TAG, "onTouchEvent: currentTranslationX: " + currentTranslationX
