@@ -11,7 +11,7 @@ import android.widget.FrameLayout;
 
 public abstract class CustomFatherView extends FrameLayout {
 
-    public static final String TAG = "CustomFatherView";
+    public static final String TAG = "ZCLZCL";
 
     public CustomFatherView(@NonNull Context context) {
         super(context);
