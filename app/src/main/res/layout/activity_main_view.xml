@@ -14,12 +14,19 @@
     <com.inke.zcl.learnrxjava.view.eventview.EventView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:visibility="visible" />
-    <!--recycleView-->
+        android:visibility="gone" />
 
+    <!--recycleView-->
     <com.inke.zcl.learnrxjava.view.recycleview.CustomRecycleView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:visibility="gone"/>
+        android:visibility="gone" />
+
+    <!--windowManager-->
+    <com.inke.zcl.learnrxjava.view.window.WindowManagerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="visible" />
+
 
 </FrameLayout>
