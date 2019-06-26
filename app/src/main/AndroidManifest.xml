@@ -11,8 +11,10 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
+        android:appComponentFactory=""
+        tools:replace="android:appComponentFactory"
         android:theme="@style/Theme.AppCompat.NoActionBar"
-        tools:ignore="GoogleAppIndexingWarning">
+        tools:ignore="GoogleAppIndexingWarning,UnusedAttribute">
         <activity android:name=".activity.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -22,7 +24,7 @@
         </activity>
         <activity
             android:name=".activity.LeakActivity"
-            android:theme="@style/Theme.AppCompat.NoActionBar" />
+            />
     </application>
 
 </manifest>

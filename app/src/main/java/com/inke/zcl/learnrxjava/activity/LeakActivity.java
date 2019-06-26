@@ -1,8 +1,8 @@
 package com.inke.zcl.learnrxjava.activity;
 
+import android.app.Activity;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
-import android.support.v7.app.AppCompatActivity;
 
 import com.inke.zcl.learnrxjava.manager.LeakActivityMgr;
 
@@ -11,7 +11,7 @@ import com.inke.zcl.learnrxjava.manager.LeakActivityMgr;
  * Version 1.0
  * Description:
  */
-public class LeakActivity extends AppCompatActivity {
+public class LeakActivity extends Activity {
 
 
     @Override
