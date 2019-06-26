@@ -1,7 +1,9 @@
 package com.inke.zcl.learnrxjava.utils;
 
-import android.support.annotation.NonNull;
+
 import android.util.Pair;
+
+import androidx.annotation.NonNull;
 
 import java.util.ArrayList;
 import java.util.Collection;

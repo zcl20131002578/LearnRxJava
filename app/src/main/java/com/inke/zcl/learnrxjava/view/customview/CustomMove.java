@@ -1,12 +1,13 @@
 package com.inke.zcl.learnrxjava.view.customview;
 
 import android.content.Context;
-import android.support.annotation.Nullable;
 import android.util.AttributeSet;
 import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.TextView;
+
+import androidx.annotation.Nullable;
 
 import com.inke.zcl.learnrxjava.R;
 import com.inke.zcl.learnrxjava.view.CustomFatherView;

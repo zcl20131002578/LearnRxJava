@@ -3,7 +3,8 @@ package com.inke.zcl.learnrxjava.utils;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
-import android.support.annotation.NonNull;
+
+import androidx.annotation.NonNull;
 
 /**
  * Create By chunliangzhang on 2019-06-25

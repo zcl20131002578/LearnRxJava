@@ -2,7 +2,8 @@ package com.inke.zcl.learnrxjava.activity;
 
 import android.app.Activity;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
+
+import androidx.annotation.Nullable;
 
 import com.inke.zcl.learnrxjava.manager.LeakActivityMgr;
 
