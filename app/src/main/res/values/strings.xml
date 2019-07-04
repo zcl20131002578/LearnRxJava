@@ -2,5 +2,6 @@
     <string name="app_name">LearnRxJava</string>
     <string name="move_me">move_me</string>
     <string name="click_me">Click Me</string>
+    <string name="leak_activity">this is a leak activity</string>
 
 </resources>
