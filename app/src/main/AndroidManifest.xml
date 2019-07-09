@@ -23,6 +23,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".activity.LeakActivity" />
+        <activity android:name=".kotlin.SimpleKotlinActivity" />
 
         <service
             android:name=".service.SimpleService"
