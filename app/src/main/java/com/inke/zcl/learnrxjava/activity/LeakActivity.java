@@ -5,6 +5,9 @@ import android.content.Context;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
+import android.view.animation.LinearInterpolator;
 
 import androidx.annotation.Nullable;
 
@@ -31,8 +34,15 @@ public class LeakActivity extends Activity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_leak_layout);
-        init();
-        LeakActivityMgr.getInstance().addActivity(this);
+//        init();
+//        LeakActivityMgr.getInstance().addActivity(this);
+        startAnim();
+    }
+
+    private void startAnim() {
+        Animation animation = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.gift_roate_anim);
+        animation.setInterpolator(new LinearInterpolator());
+        animation.start();
     }
 
     private void init() {

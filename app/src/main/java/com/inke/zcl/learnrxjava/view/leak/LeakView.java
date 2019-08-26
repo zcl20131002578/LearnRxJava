@@ -11,6 +11,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
 import com.inke.zcl.learnrxjava.R;
+import com.inke.zcl.learnrxjava.activity.GradientProgressActivity;
 import com.inke.zcl.learnrxjava.activity.LeakActivity;
 import com.inke.zcl.learnrxjava.utils.ContextCompat;
 import com.inke.zcl.learnrxjava.view.CustomFatherView;
@@ -49,6 +50,9 @@ public class LeakView extends CustomFatherView {
             case R.id.text_leak:
                 Intent intent = new Intent(getContext(), LeakActivity.class);
                 ContextCompat.startActivity(getContext(), intent);
+
+//                Intent intent = new Intent(getContext(), GradientProgressActivity.class);
+//                ContextCompat.startActivity(getContext(), intent);
                 break;
             default:
                 break;
