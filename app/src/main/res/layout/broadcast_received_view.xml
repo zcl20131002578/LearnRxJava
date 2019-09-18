@@ -7,7 +7,7 @@
     android:orientation="vertical">
 
     <TextView
-        android:id="@+id/text_leak"
+        android:id="@+id/click_me"
         android:layout_width="200dp"
         android:layout_height="30dp"
         android:layout_gravity="center"

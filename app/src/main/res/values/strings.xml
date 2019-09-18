@@ -4,4 +4,6 @@
     <string name="click_me">Click Me</string>
     <string name="leak_activity">this is a leak activity</string>
 
+    <string name="room_fans_num">真爱团 {0}人</string>
+    <string name="room_guard_num">守护 {0}人</string>
 </resources>

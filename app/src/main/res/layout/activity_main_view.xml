@@ -29,9 +29,16 @@
         android:visibility="gone" />
 
     <!--测试leak-->
-    <com.inke.zcl.learnrxjava.view.leak.LeakView
+    <com.inke.zcl.learnrxjava.view.leak.BroadCastReceivedView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:visibility="visible" />
+
+    <!--shape-->
+    <com.inke.zcl.learnrxjava.view.customview.ShapeView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"/>
+
 
 </FrameLayout>
