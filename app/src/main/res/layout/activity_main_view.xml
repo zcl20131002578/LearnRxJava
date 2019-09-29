@@ -32,13 +32,19 @@
     <com.inke.zcl.learnrxjava.view.leak.BroadCastReceivedView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:visibility="visible" />
+        android:visibility="gone" />
 
     <!--shape-->
     <com.inke.zcl.learnrxjava.view.customview.ShapeView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:visibility="gone"/>
+
+    <com.inke.zcl.learnrxjava.view.optimization_view.TextStabView
+        android:id="@+id/text_stab_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="visible" />
 
 
 </FrameLayout>

@@ -1,21 +1,34 @@
 package com.inke.zcl.learnrxjava.view.leak;
 
+import android.annotation.SuppressLint;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 
 import android.content.IntentFilter;
+import android.graphics.Color;
+import android.text.SpannableString;
+import android.text.Spanned;
+import android.text.method.LinkMovementMethod;
+import android.text.style.AbsoluteSizeSpan;
+import android.text.style.BackgroundColorSpan;
+import android.text.style.ClickableSpan;
+import android.text.style.ForegroundColorSpan;
+import android.text.style.TextAppearanceSpan;
 import android.util.AttributeSet;
 import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.localbroadcastmanager.content.LocalBroadcastManager;
 
 import com.inke.zcl.learnrxjava.R;
+import com.inke.zcl.learnrxjava.activity.MainActivity;
 import com.inke.zcl.learnrxjava.view.CustomFatherView;
+import com.inke.zcl.learnrxjava.view.utils.VerticalCenterSpan;
 
 /**
  * Create By chunliangzhang on 2019-06-25
@@ -41,10 +54,12 @@ public class BroadCastReceivedView extends CustomFatherView {
         return R.layout.broadcast_received_view;
     }
 
+    @SuppressLint("NewApi")
     @Override
     protected void init() {
         clickMe = findViewById(R.id.click_me);
         clickMe.setOnClickListener(this::callOnClick);
+
     }
 
     @Override
