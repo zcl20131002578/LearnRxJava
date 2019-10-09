@@ -15,6 +15,7 @@ import androidx.annotation.Nullable;
 public abstract class CustomFatherView extends FrameLayout {
 
     public static final String TAG = "ZCLZCL";
+    protected View currentRootView;
 
     public CustomFatherView(@NonNull Context context) {
         super(context);
@@ -32,7 +33,7 @@ public abstract class CustomFatherView extends FrameLayout {
             return;
         }
         try {
-            LayoutInflater.from(context).inflate(getLayoutId(), this);
+            currentRootView = LayoutInflater.from(context).inflate(getLayoutId(), this);
             init();
         } catch (Exception e) {
             e.printStackTrace();
