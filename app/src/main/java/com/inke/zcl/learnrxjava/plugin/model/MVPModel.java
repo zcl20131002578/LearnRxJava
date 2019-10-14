@@ -1,6 +1,6 @@
-package com.inke.zcl.learnrxjava.mvp.model;
+package com.inke.zcl.learnrxjava.plugin.model;
 
-import com.inke.zcl.learnrxjava.mvp.contract.MVPContract;
+import com.inke.zcl.learnrxjava.plugin.contract.MVPContract;
 
 /**
  * Create By chunliangzhang on 2019-10-14

@@ -1,4 +1,4 @@
-package com.inke.zcl.learnrxjava.mvp.contract;
+package com.inke.zcl.learnrxjava.plugin.contract;
 
 /**
  * Create By chunliangzhang on 2019-10-14
