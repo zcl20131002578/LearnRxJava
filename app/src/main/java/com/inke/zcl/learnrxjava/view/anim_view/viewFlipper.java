@@ -3,10 +3,12 @@ package com.inke.zcl.learnrxjava.view.anim_view;
 import android.content.Context;
 import android.util.AttributeSet;
 import android.view.View;
+import android.widget.ImageView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
+import com.inke.zcl.learnrxjava.R;
 import com.inke.zcl.learnrxjava.view.CustomFatherView;
 
 /**
@@ -26,12 +28,13 @@ public class viewFlipper extends CustomFatherView {
 
     @Override
     protected int getLayoutId() {
-        return 0;
+        return R.layout.custom_view_flipper;
     }
 
     @Override
     protected void init() {
-
+        ImageView iv_camera = findViewById(R.id.iv_camera);
+        iv_camera.setImageDrawable(getContext().getResources().getDrawable(R.drawable.bank_camera));
     }
 
     @Override
