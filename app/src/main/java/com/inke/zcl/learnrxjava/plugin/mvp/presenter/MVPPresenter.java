@@ -1,6 +1,6 @@
-package com.inke.zcl.learnrxjava.plugin.presenter;
+package com.inke.zcl.learnrxjava.plugin.mvp.presenter;
 
-import com.inke.zcl.learnrxjava.plugin.contract.MVPContract;
+import com.inke.zcl.learnrxjava.plugin.mvp.contract.MVPContract;
 
 /**
  * Create By chunliangzhang on 2019-10-14
