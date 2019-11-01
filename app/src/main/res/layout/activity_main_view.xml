@@ -39,12 +39,18 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:visibility="gone"/>
-
+    <!--viewStub-->
     <com.inke.zcl.learnrxjava.view.optimization_view.TextStabView
         android:id="@+id/text_stab_view"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:visibility="visible" />
+        android:visibility="gone" />
 
+    <!--ViewFlipper-->
+    <com.inke.zcl.learnrxjava.view.anim_view.CustomViewFlipper
+        android:id="@+id/view_flipper_root_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="visible" />
 
 </FrameLayout>
