@@ -1,6 +1,7 @@
 package com.inke.zcl.learnrxjava.view.anim_view;
 
 import android.content.Context;
+import android.content.Intent;
 import android.util.AttributeSet;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -40,6 +41,8 @@ public class CustomViewFlipper extends CustomFatherView {
         viewFlipper = findViewById(R.id.viewFlipper);
         viewFlipperString = new String[]{"1", "2", "3"};
         initData();
+//        Intent intent = new Intent(getContext(),FirstDemoActivity.class);
+//        getContext().startActivity(intent);
     }
 
     private void initData() {

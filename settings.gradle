@@ -1,1 +1,4 @@
 include ':app'
+project(':app').projectDir = new File(rootDir,'../LearnRxJavaGit/app')
+include ':firstmode'
+project(':firstmode').projectDir = new File(rootDir,'../LearnRxJavaGit/firstmode')
