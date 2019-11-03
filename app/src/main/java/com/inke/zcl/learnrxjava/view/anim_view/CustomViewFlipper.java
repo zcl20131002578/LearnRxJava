@@ -41,8 +41,6 @@ public class CustomViewFlipper extends CustomFatherView {
         viewFlipper = findViewById(R.id.viewFlipper);
         viewFlipperString = new String[]{"1", "2", "3"};
         initData();
-//        Intent intent = new Intent(getContext(),FirstDemoActivity.class);
-//        getContext().startActivity(intent);
     }
 
     private void initData() {
