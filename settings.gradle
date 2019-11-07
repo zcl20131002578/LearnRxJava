@@ -4,3 +4,6 @@ include ':utilsmode'
 project(':utilsmode').projectDir = new File(rootDir, 'library/utilsmode')
 include ':mylibrary'
 project(':mylibrary').projectDir = new File(rootDir, 'library/mylibrary')
+
+include ':jarlib'
+project(':jarlib').projectDir = new File(rootDir, 'library/jarlib')

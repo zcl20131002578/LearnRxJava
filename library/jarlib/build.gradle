@@ -1,0 +1,25 @@
+apply plugin: 'java-library'
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+}
+
+sourceCompatibility = "7"
+targetCompatibility = "7"
+
+def customPublishFile = new File('README.md')
+
+task customPublishJar(type: Jar) {
+
+}
+
+artifacts {
+//    archives customPublishJar
+    archives customPublishFile
+}
+
+uploadArchives {
+    repositories {
+        flatDir name: 'libs', dirs: "$projectDir/libs"
+    }
+}

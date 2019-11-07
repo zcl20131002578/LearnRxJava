@@ -1,10 +1,6 @@
 apply plugin: 'com.android.library'
 apply plugin: 'maven'
 
-version '1.0.0-SNAPSHOT'
-group 'org.zcl.library'
-
-
 android {
     compileSdkVersion 28
 
@@ -24,19 +20,22 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
+}
 
-    uploadArchives {
-        repositories {
-            mavenDeployer {
-                repository(url: "http://127.0.0.1:8081/nexus/content/repositories/releases") {
-                    authentication(userName: "admin", password: "19940817iou")
-                }
-                snapshotRepository(url: "http://127.0.0.1:8081/nexus/content/repositories/snapshots") {
-                    authentication(userName: "admin", password: "19940817iou")
-                }
-                pom.artifactId = "utilsMode"
-//                pom.packaing = 'aar'
+version '1.0.1'
+group 'org.zcl.library'
+
+uploadArchives {
+    repositories {
+        mavenDeployer {
+            repository(url: mavenReleaseUrl) {
+                authentication(userName: mavenUserName, password: mavenUserPassword)
             }
+            snapshotRepository(url: mavenSnapShotUrl) {
+                authentication(userName: mavenUserName, password: mavenUserPassword)
+            }
+            pom.artifactId = "utilsmode"
+            pom.packaging = 'aar'
         }
     }
 }

@@ -39,5 +39,10 @@ dependencies {
     implementation 'com.android.support:recyclerview-v7:28.0.0'
     implementation 'org.jetbrains:annotations:15.0'
     debugImplementation 'com.squareup.leakcanary:leakcanary-android:2.0-alpha-2'
+    //project implementation
     implementation project(path: ':utilsmode')
+    //maven implementation
+//    implementation 'org.zcl.library:utilsmode:1.0.1'
+    implementation project(path: ":jarlib")
+    implementation project(path: ":jarlib")
 }

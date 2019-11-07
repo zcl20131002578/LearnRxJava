@@ -7,6 +7,12 @@ buildscript {
     repositories {
         google()
         jcenter()
+        maven {
+            url 'http://127.0.0.1:8081/repository/maven-releases/'
+        }
+        maven {
+            url 'http://127.0.0.1:8081/repository/maven-snapshots/'
+        }
     }
     dependencies {
         classpath 'com.android.tools.build:gradle:3.5.1'
@@ -22,10 +28,10 @@ allprojects {
         google()
         jcenter()
         maven {
-            url 'http://127.0.0.1:8081/nexus/content/groups/releases'
+            url 'http://127.0.0.1:8081/repository/maven-releases/'
         }
         maven {
-            url 'http://127.0.0.1:8081/nexus/content/groups/snapshots'
+            url 'http://127.0.0.1:8081/repository/maven-snapshots/'
         }
     }
 }
