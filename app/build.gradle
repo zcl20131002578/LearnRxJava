@@ -28,7 +28,7 @@ android {
 }
 
 dependencies {
-    implementation fileTree(include: ['*.jar'], dir: 'libs')
+
     implementation 'com.android.support:appcompat-v7:28.0.0'
     implementation 'com.android.support.constraint:constraint-layout:1.1.3'
     testImplementation 'junit:junit:4.12'
@@ -39,10 +39,16 @@ dependencies {
     implementation 'com.android.support:recyclerview-v7:28.0.0'
     implementation 'org.jetbrains:annotations:15.0'
     debugImplementation 'com.squareup.leakcanary:leakcanary-android:2.0-alpha-2'
+
+    //implementation local file
+
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
     //project implementation
-    implementation project(path: ':utilsmode')
-    //maven implementation
-//    implementation 'org.zcl.library:utilsmode:1.0.1'
-    implementation project(path: ":jarlib")
-    implementation project(path: ":jarlib")
+//    implementation project(path: ':utilsmode')
+//    implementation project(path: ":jarlib")
+//    implementation project(path: ":mylibrary")
+
+    //self maven implementation
+    implementation 'org.zcl.library:utilsmode:1.0.1'
+//    implementation 'org.zcl.library.jar:jarutils:1.0.0-SNAPSHOT'
 }

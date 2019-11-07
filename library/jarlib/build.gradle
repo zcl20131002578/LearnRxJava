@@ -1,4 +1,5 @@
 apply plugin: 'java-library'
+apply plugin: 'maven'
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
@@ -7,19 +8,32 @@ dependencies {
 sourceCompatibility = "7"
 targetCompatibility = "7"
 
-def customPublishFile = new File('README.md')
+def customPublishFile = new File('aaa.txt')
 
 task customPublishJar(type: Jar) {
 
 }
 
 artifacts {
-//    archives customPublishJar
-    archives customPublishFile
+    archives customPublishJar
+//    archives customPublishFile
 }
+
+group 'org.zcl.library.jar'
+version '1.0.0-SNAPSHOT'
 
 uploadArchives {
     repositories {
         flatDir name: 'libs', dirs: "$projectDir/libs"
+//        mavenLocal()
+        mavenDeployer {
+            repository(url: mavenReleaseUrl) {
+                authentication(userName: mavenUserName, password: mavenUserPassword)
+            }
+            snapshotRepository(url: mavenSnapShotUrl) {
+                authentication(userName: mavenUserName, password: mavenUserPassword)
+            }
+            pom.artifactId = "jarutils"
+        }
     }
 }
