@@ -8,16 +8,16 @@ dependencies {
 sourceCompatibility = "7"
 targetCompatibility = "7"
 
-def customPublishFile = new File('aaa.txt')
+//def customPublishFile = new File('uploadFile.txt')
 
-task customPublishJar(type: Jar) {
+//task customPublishJar(type: Jar) {
+//
+//}
 
-}
-
-artifacts {
-    archives customPublishJar
-//    archives customPublishFile
-}
+//artifacts {
+////    archives customPublishJar
+////    archives customPublishFile
+//}
 
 group 'org.zcl.library.jar'
 version '1.0.0-SNAPSHOT'
@@ -25,7 +25,9 @@ version '1.0.0-SNAPSHOT'
 uploadArchives {
     repositories {
         flatDir name: 'libs', dirs: "$projectDir/libs"
+
 //        mavenLocal()
+
         mavenDeployer {
             repository(url: mavenReleaseUrl) {
                 authentication(userName: mavenUserName, password: mavenUserPassword)
@@ -33,7 +35,7 @@ uploadArchives {
             snapshotRepository(url: mavenSnapShotUrl) {
                 authentication(userName: mavenUserName, password: mavenUserPassword)
             }
-            pom.artifactId = "jarutils"
+            pom.artifactId = jarArtiId
         }
     }
 }
