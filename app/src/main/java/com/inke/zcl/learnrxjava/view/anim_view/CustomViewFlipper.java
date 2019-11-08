@@ -13,7 +13,7 @@ import androidx.annotation.Nullable;
 
 import com.inke.zcl.learnrxjava.R;
 import com.inke.zcl.learnrxjava.view.CustomFatherView;
-import com.zcl.jarlib.MyJarClass;
+import com.zcl.jarlib.MyJarUtils;
 
 /**
  * Create By chunliangzhang on 2019-09-29
@@ -42,7 +42,7 @@ public class CustomViewFlipper extends CustomFatherView {
         viewFlipper = findViewById(R.id.viewFlipper);
         viewFlipperString = new String[]{"1", "2", "3"};
         initData();
-        MyJarClass jarClass = new MyJarClass();
+        MyJarUtils utils = new MyJarUtils();
     }
 
     private void initData() {

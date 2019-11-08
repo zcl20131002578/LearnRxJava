@@ -20,6 +20,11 @@ buildscript {
 allprojects {
     repositories {
         maven {
+            /**
+             * 配置了私服却无法访问 errorMsg:HTTP 401: Unauthorized
+             * gradle 栈跟踪 ./gradlew assembleDebug -s
+             * 解决办法:https://stackoverflow.com/questions/34221313/gradle-build-failure-could-not-resolve-all-dependencies-for-configuration-cla
+             */
             credentials {
                 username mavenUserName
                 password mavenUserPassword
