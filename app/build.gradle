@@ -44,11 +44,11 @@ dependencies {
     implementation fileTree(include: ['*.jar'], dir: 'libs')
 
     //project implementation
-//    implementation project(path: ':utilsmode')
-//    implementation project(path: ":jarlib")
-//    implementation project(path: ":mylibrary")
+    implementation project(path: ':utilsmode')
+    implementation project(path: ":jarlib")
+    implementation project(path: ":mylibrary")
 
     //self maven implementation(include aar and jar)
-    implementation 'org.zcl.library:utilsmode:1.0.1'
+//    implementation 'org.zcl.library:utilsmode:1.0.1'
 //    implementation 'org.zcl.library.jar:jarutils:1.0.0-SNAPSHOT'
 }
