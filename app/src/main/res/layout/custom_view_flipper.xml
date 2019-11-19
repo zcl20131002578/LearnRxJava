@@ -7,8 +7,10 @@
 
 
     <TextView
+        android:id="@+id/view_flipper"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:padding="20dp"
         android:text="ViewFlipper"
         android:textColor="@android:color/black" />
 
@@ -16,8 +18,8 @@
         android:id="@+id/viewFlipper"
         android:layout_width="match_parent"
         android:layout_height="60dp"
+        android:layout_gravity="center"
         android:inAnimation="@anim/anim_in"
-        android:outAnimation="@anim/anim_out"
-        android:layout_gravity="center" />
+        android:outAnimation="@anim/anim_out" />
 
 </LinearLayout>

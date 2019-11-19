@@ -12,6 +12,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
 import com.inke.zcl.learnrxjava.R;
+import com.inke.zcl.learnrxjava.rx.RxOperator;
 import com.inke.zcl.learnrxjava.view.CustomFatherView;
 import com.zcl.jarlib.MyJarUtils;
 
@@ -22,6 +23,7 @@ import com.zcl.jarlib.MyJarUtils;
  */
 public class CustomViewFlipper extends CustomFatherView {
     private ViewFlipper viewFlipper;
+    private TextView tv_view_flipper;
     String[] viewFlipperString;
 
     public CustomViewFlipper(@NonNull Context context) {
@@ -40,9 +42,15 @@ public class CustomViewFlipper extends CustomFatherView {
     @Override
     protected void init() {
         viewFlipper = findViewById(R.id.viewFlipper);
+        tv_view_flipper = findViewById(R.id.view_flipper);
         viewFlipperString = new String[]{"1", "2", "3"};
         initData();
+        tv_view_flipper.setOnClickListener(this::text);
+    }
+
+    private void text(View view) {
         MyJarUtils utils = new MyJarUtils();
+        RxOperator.mainOper();
     }
 
     private void initData() {
