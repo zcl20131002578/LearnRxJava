@@ -12,8 +12,6 @@ import rx.schedulers.Schedulers;
 public class RxScheduler {
 
 
-
-
     public static void mainScheduler(){
 
     }
