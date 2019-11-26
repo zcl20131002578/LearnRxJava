@@ -28,6 +28,7 @@ group 'org.zcl.library'
 uploadArchives {
     repositories {
         mavenDeployer {
+            println("utilsmode uploadArchives")
             repository(url: mavenReleaseUrl) {
                 authentication(userName: mavenUserName, password: mavenUserPassword)
             }

@@ -1,5 +1,6 @@
 apply plugin: 'java-library'
 apply plugin: 'maven'
+apply plugin: 'maven-publish'
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
@@ -8,16 +9,18 @@ dependencies {
 sourceCompatibility = "7"
 targetCompatibility = "7"
 
-//def customPublishFile = new File('uploadFile.txt')
+def customPublishFile = new File("$rootProject.projectDir/library/jarlib/uploadFile.txt")
 
-//task customPublishJar(type: Jar) {
-//
-//}
+task customPublishJar(type: Jar) {
 
-//artifacts {
-////    archives customPublishJar
-////    archives customPublishFile
-//}
+}
+
+artifacts {
+    archives customPublishJar
+    archives customPublishFile, {
+
+    }
+}
 
 
 group 'org.zcl.library.jar'
@@ -25,9 +28,13 @@ version '1.0.0-SNAPSHOT'
 
 uploadArchives {
     repositories {
-        flatDir name: 'libs', dirs: "$projectDir/libs"
+        println("jarlib uploadArchives")
+        flatDir {
+            name 'libs'
+            dirs "$rootProject.rootDir/libs"
+        }
 
-//        mavenLocal()
+        mavenLocal()
 
         mavenDeployer {
             repository(url: mavenReleaseUrl) {
@@ -39,4 +46,8 @@ uploadArchives {
             pom.artifactId = jarArtiId
         }
     }
+}
+
+publishing {
+
 }
