@@ -11,8 +11,10 @@ import android.widget.ViewFlipper;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
+import com.inke.zcl.firstmode.Reflect.ReflectHelper;
 import com.inke.zcl.learnrxjava.R;
 import com.inke.zcl.learnrxjava.rx.RxOperator;
+import com.inke.zcl.learnrxjava.rx.RxScheduler;
 import com.inke.zcl.learnrxjava.view.CustomFatherView;
 import com.zcl.jarlib.MyJarUtils;
 
@@ -51,6 +53,8 @@ public class CustomViewFlipper extends CustomFatherView {
     private void text(View view) {
         MyJarUtils utils = new MyJarUtils();
         RxOperator.mainOper();
+        RxScheduler.mainScheduler();
+        ReflectHelper.mainReflect(getContext());
     }
 
     private void initData() {
