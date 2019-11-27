@@ -12,7 +12,6 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
 import com.inke.zcl.learnrxjava.R;
-import com.inke.zcl.learnrxjava.rx.RxHelloWorld;
 import com.inke.zcl.learnrxjava.view.CustomFatherView;
 
 /**
@@ -41,7 +40,6 @@ public class TextStabView extends CustomFatherView {
     @SuppressLint("WrongViewCast")
     @Override
     protected void init() {
-        RxHelloWorld.getInstance().mainStart();
 
         mViewStub = (ViewStub) findViewById(R.id.act_test_viewstub_viewstub);
 
