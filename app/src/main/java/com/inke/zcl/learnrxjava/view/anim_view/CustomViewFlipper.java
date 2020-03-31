@@ -1,11 +1,13 @@
 package com.inke.zcl.learnrxjava.view.anim_view;
 
+import android.animation.ObjectAnimator;
 import android.content.Context;
 import android.content.Intent;
 import android.util.AttributeSet;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.TextView;
+import android.widget.Toast;
 import android.widget.ViewFlipper;
 
 import androidx.annotation.NonNull;
@@ -27,7 +29,10 @@ import com.zcl.jarlib.MyJarUtils;
 public class CustomViewFlipper extends CustomFatherView {
     private ViewFlipper viewFlipper;
     private TextView tv_view_flipper;
+    private TextView view_flipper_canzhao;
     String[] viewFlipperString;
+    private boolean switchText=true;
+    private boolean switchCanzhao=true;
 
     public CustomViewFlipper(@NonNull Context context) {
         super(context);
@@ -46,15 +51,44 @@ public class CustomViewFlipper extends CustomFatherView {
     protected void init() {
         viewFlipper = findViewById(R.id.viewFlipper);
         tv_view_flipper = findViewById(R.id.view_flipper);
+        view_flipper_canzhao = findViewById(R.id.view_flipper_canzhao);
         viewFlipperString = new String[]{"1", "2", "3"};
         initData();
         tv_view_flipper.setOnClickListener(this::text);
+        view_flipper_canzhao.setOnClickListener(this::onClickCanzhao);
+    }
+
+
+
+
+    private void onClickCanzhao(View view) {
+        if (switchCanzhao) {
+            tv_view_flipper.setAlpha(0);
+            tv_view_flipper.setClickable(false);
+            switchCanzhao = false;
+        } else {
+            tv_view_flipper.setClickable(true);
+            tv_view_flipper.setAlpha(1);
+            switchCanzhao = true;
+        }
     }
 
     private void text(View view) {
-        MyJarUtils utils = new MyJarUtils();
-//        RxScheduler.mainScheduler();
-        RxAdvancedOperator.mainAdvancedOperator();
+        Toast.makeText(getContext(), "clickThis", Toast.LENGTH_SHORT).show();
+//        MyJarUtils utils = new MyJarUtils();
+////        RxScheduler.mainScheduler();
+//        RxAdvancedOperator.mainAdvancedOperator();
+        if (switchText) {
+            ObjectAnimator yCountDown = ObjectAnimator.ofFloat(tv_view_flipper, TRANSLATION_Y, 0, -100);
+            yCountDown.setDuration(200);
+            yCountDown.start();
+            switchText = false;
+        } else {
+            ObjectAnimator yCountDown = ObjectAnimator.ofFloat(tv_view_flipper, TRANSLATION_Y, 0, 100);
+            yCountDown.setDuration(200);
+            yCountDown.start();
+            switchText = true;
+        }
     }
 
     private void initData() {
@@ -73,6 +107,7 @@ public class CustomViewFlipper extends CustomFatherView {
         }
         viewFlipper.setFlipInterval(2000);
         viewFlipper.startFlipping();
+
     }
 
 
