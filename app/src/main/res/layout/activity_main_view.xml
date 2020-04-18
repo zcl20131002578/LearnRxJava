@@ -51,14 +51,20 @@
         android:id="@+id/view_flipper_root_view"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:visibility="visible" />
+        android:visibility="gone" />
 
     <!--冷却倒计时-->
     <com.inke.zcl.learnrxjava.view.anim_view.coldDown.ColdDownTimerView
         android:id="@+id/cold_down_timer"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:visibility="gone"/>
+        android:visibility="gone" />
+
+    <!--功能测试入口-->
+    <com.inke.zcl.learnrxjava.view.customview.CustomTextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="visible" />
 
 
 </FrameLayout>
