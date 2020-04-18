@@ -70,7 +70,6 @@ public class CustomViewFlipper extends CustomFatherView {
         ARouter.getInstance().build(RouterConstans.GradientProgressActivity)
                 .withLong("key1", 666L)
                 .withString("key3", "888")
-                .withObject("key4", 111)
                 .navigation();
     }
 }
