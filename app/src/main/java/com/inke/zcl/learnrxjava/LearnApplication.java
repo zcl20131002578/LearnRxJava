@@ -4,6 +4,7 @@ import android.app.Application;
 import android.content.ComponentCallbacks;
 import android.content.Context;
 import android.content.res.Configuration;
+import android.util.Log;
 
 import com.alibaba.android.arouter.launcher.ARouter;
 
@@ -13,6 +14,8 @@ import com.alibaba.android.arouter.launcher.ARouter;
  * Description:
  */
 public class LearnApplication extends Application {
+
+    private static final String TAG = "LearnApplication";
 
     private static final boolean DEBUG = true;
 
@@ -26,6 +29,7 @@ public class LearnApplication extends Application {
             ARouter.openLog();     // 打印日志
             ARouter.openDebug();   // 开启调试模式(如果在InstantRun模式下运行，必须开启调试模式！线上版本需要关闭,否则有安全风险)
         }
+        Log.e(TAG, "onCreate: init()");
         ARouter.init(this); // 尽可能早，推荐在Application中初始化
     }
 

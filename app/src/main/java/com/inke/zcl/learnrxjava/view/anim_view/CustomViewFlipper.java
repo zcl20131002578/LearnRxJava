@@ -64,13 +64,13 @@ public class CustomViewFlipper extends CustomFatherView {
     @Override
     protected void callOnClick(View v) {
         // 1. 应用内简单的跳转(通过URL跳转在'进阶用法'中)
-        ARouter.getInstance().build(RouterConstans.GradientProgressActivity).navigation();
+//        ARouter.getInstance().build(RouterConstans.GradientProgressActivity).navigation();
 
-//        // 2. 跳转并携带参数
-//        ARouter.getInstance().build(RouterConstans.GradientProgressActivity)
-//                .withLong("key1", 666L)
-//                .withString("key3", "888")
-//                .withObject("key4", 111)
-//                .navigation();
+        // 2. 跳转并携带参数
+        ARouter.getInstance().build(RouterConstans.GradientProgressActivity)
+                .withLong("key1", 666L)
+                .withString("key3", "888")
+                .withObject("key4", 111)
+                .navigation();
     }
 }
