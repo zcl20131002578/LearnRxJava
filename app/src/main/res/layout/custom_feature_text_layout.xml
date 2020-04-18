@@ -5,14 +5,13 @@
     android:orientation="vertical">
 
     <TextView
-        android:id="@+id/setG"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="100dp"
-        android:background="@color/colorPrimary"
-        android:gravity="center"
-        android:padding="20dp"
-        android:text="算法"
-        android:textColor="@android:color/black" />
+        android:id="@+id/text_algorithm"
+        style="@style/text_view_base_style"
+        android:text="text_algorithm" />
+
+    <TextView
+        android:id="@+id/text_router"
+        style="@style/text_view_base_style"
+        android:text="text_router" />
 
 </LinearLayout>

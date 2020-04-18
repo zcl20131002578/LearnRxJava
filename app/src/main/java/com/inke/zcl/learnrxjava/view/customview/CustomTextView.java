@@ -34,11 +34,30 @@ public class CustomTextView extends CustomFatherView {
 
     @Override
     protected void init() {
-        findViewById(R.id.setG).setOnClickListener(this::callOnClick);
+        findViewById(R.id.text_algorithm).setOnClickListener(this::callOnClick);
+        findViewById(R.id.text_router).setOnClickListener(this::callOnClick);
     }
 
     @Override
     protected void callOnClick(View v) {
+        switch (v.getId()) {
+            case R.id.text_algorithm:
+                textAlgorithm();
+                break;
+            case R.id.text_router:
+                textAouter();
+                break;
+            default:
+                break;
+        }
+        textAlgorithm();
+    }
+
+    private void textAlgorithm() {
+
+    }
+
+    private void textAouter() {
         // 1. 应用内简单的跳转(通过URL跳转在'进阶用法'中)
 //        ARouter.getInstance().build(RouterConstans.GradientProgressActivity).navigation();
 
@@ -48,4 +67,6 @@ public class CustomTextView extends CustomFatherView {
                 .withString("key3", "888")
                 .navigation();
     }
+
+
 }

@@ -44,7 +44,7 @@
         android:id="@+id/view_flipper_canzhao_1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/setG"
+        android:layout_below="@+id/text_algorithm"
         android:layout_marginTop="100dp"
         android:background="@color/colorPrimary"
         android:padding="20dp"
