@@ -4,12 +4,17 @@ import android.app.Activity;
 import android.os.Bundle;
 import android.widget.SeekBar;
 
+import com.alibaba.android.arouter.facade.annotation.Route;
 import com.inke.zcl.learnrxjava.R;
 import com.inke.zcl.learnrxjava.view.customview.GradientProgressBar;
 
 /**
  * Created by WangChunLei on 16/1/6.
  */
+
+// 在支持路由的页面上添加注解(必选)
+// 这里的路径需要注意的是至少需要有两级，/xx/xx
+@Route(path = RouterConstans.GradientProgressActivity)
 public class GradientProgressActivity extends Activity {
 
     @Override

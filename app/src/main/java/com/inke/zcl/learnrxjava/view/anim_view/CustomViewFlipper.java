@@ -1,25 +1,19 @@
 package com.inke.zcl.learnrxjava.view.anim_view;
 
-import android.animation.ObjectAnimator;
 import android.content.Context;
-import android.content.Intent;
 import android.util.AttributeSet;
-import android.view.LayoutInflater;
 import android.view.View;
-import android.widget.TextView;
-import android.widget.Toast;
-import android.widget.ViewFlipper;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
-import com.inke.zcl.firstmode.Reflect.ReflectHelper;
+import com.alibaba.android.arouter.launcher.ARouter;
 import com.inke.zcl.learnrxjava.R;
-import com.inke.zcl.learnrxjava.rx.RxAdvancedOperator;
-import com.inke.zcl.learnrxjava.rx.RxOperator;
-import com.inke.zcl.learnrxjava.rx.RxScheduler;
+import com.inke.zcl.learnrxjava.activity.RouterConstans;
+import com.inke.zcl.learnrxjava.design.javaoffer.QuestionFive;
+import com.inke.zcl.learnrxjava.design.javaoffer.QuestionFour;
+import com.inke.zcl.learnrxjava.design.javaoffer.QuestionSix;
 import com.inke.zcl.learnrxjava.view.CustomFatherView;
-import com.zcl.jarlib.MyJarUtils;
 
 /**
  * Create By chunliangzhang on 2019-09-29
@@ -27,12 +21,7 @@ import com.zcl.jarlib.MyJarUtils;
  * Description: 向上滑动的自定义View
  */
 public class CustomViewFlipper extends CustomFatherView {
-    private ViewFlipper viewFlipper;
-    private TextView tv_view_flipper;
-    private TextView view_flipper_canzhao;
-    String[] viewFlipperString;
-    private boolean switchText=true;
-    private boolean switchCanzhao=true;
+
 
     public CustomViewFlipper(@NonNull Context context) {
         super(context);
@@ -49,75 +38,39 @@ public class CustomViewFlipper extends CustomFatherView {
 
     @Override
     protected void init() {
-        viewFlipper = findViewById(R.id.viewFlipper);
-        tv_view_flipper = findViewById(R.id.view_flipper);
-        view_flipper_canzhao = findViewById(R.id.view_flipper_canzhao);
-        viewFlipperString = new String[]{"1", "2", "3"};
-        initData();
-        tv_view_flipper.setOnClickListener(this::text);
-        view_flipper_canzhao.setOnClickListener(this::onClickCanzhao);
-    }
-
-
-
-
-    private void onClickCanzhao(View view) {
-        if (switchCanzhao) {
-            tv_view_flipper.setAlpha(0);
-            tv_view_flipper.setClickable(false);
-            switchCanzhao = false;
-        } else {
-            tv_view_flipper.setClickable(true);
-            tv_view_flipper.setAlpha(1);
-            switchCanzhao = true;
-        }
-    }
-
-    private void text(View view) {
-        Toast.makeText(getContext(), "clickThis", Toast.LENGTH_SHORT).show();
-//        MyJarUtils utils = new MyJarUtils();
-////        RxScheduler.mainScheduler();
-//        RxAdvancedOperator.mainAdvancedOperator();
-        if (switchText) {
-            ObjectAnimator yCountDown = ObjectAnimator.ofFloat(tv_view_flipper, TRANSLATION_Y, 0, -100);
-            yCountDown.setDuration(200);
-            yCountDown.start();
-            switchText = false;
-        } else {
-            ObjectAnimator yCountDown = ObjectAnimator.ofFloat(tv_view_flipper, TRANSLATION_Y, 0, 100);
-            yCountDown.setDuration(200);
-            yCountDown.start();
-            switchText = true;
-        }
+        findViewById(R.id.setG).setOnClickListener(this::callOnClick);
     }
 
     private void initData() {
-        for (int i = 0; i < 3; i++) {
-            View view = LayoutInflater.from(getContext()).inflate(R.layout.custom_view_flipper_item, null);
-            TextView textView = view.findViewById(R.id.tv_camera);
-            textView.setText(viewFlipperString[i]);
-            viewFlipper.addView(view);
-
-            /*view.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    Log.d("Guanggao", "点击了" + i);
-                }
-            });*/
-        }
-        viewFlipper.setFlipInterval(2000);
-        viewFlipper.startFlipping();
+//        for (int i = 0; i < 3; i++) {
+//            View view = LayoutInflater.from(getContext()).inflate(R.layout.custom_view_flipper_item, null);
+//            TextView textView = view.findViewById(R.id.tv_camera);
+//            textView.setText(viewFlipperString[i]);
+//            viewFlipper.addView(view);
+//
+//            /*view.setOnClickListener(new View.OnClickListener() {
+//                @Override
+//                public void onClick(View v) {
+//                    Log.d("Guanggao", "点击了" + i);
+//                }
+//            });*/
+//        }
+//        viewFlipper.setFlipInterval(2000);
+//        viewFlipper.startFlipping();
 
     }
-
 
 
     @Override
     protected void callOnClick(View v) {
+        // 1. 应用内简单的跳转(通过URL跳转在'进阶用法'中)
+        ARouter.getInstance().build(RouterConstans.GradientProgressActivity).navigation();
 
-    }
-
-    public interface IViewFlipperInitView{
-        void initViewFlipperItem();
+//        // 2. 跳转并携带参数
+//        ARouter.getInstance().build(RouterConstans.GradientProgressActivity)
+//                .withLong("key1", 666L)
+//                .withString("key3", "888")
+//                .withObject("key4", 111)
+//                .navigation();
     }
 }

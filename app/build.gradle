@@ -38,6 +38,10 @@ dependencies {
     implementation 'io.reactivex:rxandroid:1.2.1'
     implementation 'com.android.support:recyclerview-v7:28.0.0'
     implementation 'org.jetbrains:annotations:15.0'
+
+    implementation 'com.alibaba:arouter-api:1.5.0'
+    annotationProcessor 'com.alibaba:arouter-compiler:1.2.2'
+
     debugImplementation 'com.squareup.leakcanary:leakcanary-android:2.0-alpha-2'
 
     //implementation local file

@@ -3,6 +3,8 @@ package com.inke.zcl.learnrxjava.design.singole;
 import android.os.Parcel;
 import android.os.Parcelable;
 
+import java.util.List;
+
 /**
  * Create By chunliangzhang on 2020-03-20
  * Version 1.0
