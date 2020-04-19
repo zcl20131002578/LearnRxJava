@@ -12,6 +12,7 @@ import com.inke.zcl.learnrxjava.R;
 import com.inke.zcl.learnrxjava.activity.RouterConstans;
 import com.inke.zcl.learnrxjava.design.javaoffer.IQuestion;
 import com.inke.zcl.learnrxjava.design.javaoffer.QuestionSeven;
+import com.inke.zcl.learnrxjava.design.javaoffer.QuickSort;
 import com.inke.zcl.learnrxjava.design.javaoffer.QustionSix_;
 import com.inke.zcl.learnrxjava.design.javaoffer.SearchAndSort;
 import com.inke.zcl.learnrxjava.view.CustomFatherView;
@@ -57,7 +58,7 @@ public class CustomTextView extends CustomFatherView {
     }
 
     private void textAlgorithm() {
-        IQuestion question = new SearchAndSort();
+        IQuestion question = new QuickSort();
         question.main();
     }
 
