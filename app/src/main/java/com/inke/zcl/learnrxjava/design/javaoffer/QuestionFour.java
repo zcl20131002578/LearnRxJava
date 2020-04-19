@@ -62,7 +62,7 @@ public class QuestionFour {
         return result;
     }
 
-    public String replaceSpaceBuffer(StringBuffer str) {
+    public String replaceSpace(StringBuffer str) {
         for (int k = 0; k < str.length(); k++) {
             char index = str.charAt(k);
             if (index == ' ') {

@@ -10,6 +10,10 @@ import androidx.annotation.Nullable;
 import com.alibaba.android.arouter.launcher.ARouter;
 import com.inke.zcl.learnrxjava.R;
 import com.inke.zcl.learnrxjava.activity.RouterConstans;
+import com.inke.zcl.learnrxjava.design.javaoffer.IQuestion;
+import com.inke.zcl.learnrxjava.design.javaoffer.QuestionSeven;
+import com.inke.zcl.learnrxjava.design.javaoffer.QustionSix_;
+import com.inke.zcl.learnrxjava.design.javaoffer.SearchAndSort;
 import com.inke.zcl.learnrxjava.view.CustomFatherView;
 
 /**
@@ -50,11 +54,11 @@ public class CustomTextView extends CustomFatherView {
             default:
                 break;
         }
-        textAlgorithm();
     }
 
     private void textAlgorithm() {
-
+        IQuestion question = new SearchAndSort();
+        question.main();
     }
 
     private void textAouter() {
