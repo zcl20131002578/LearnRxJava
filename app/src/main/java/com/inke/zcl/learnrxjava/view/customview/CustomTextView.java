@@ -11,10 +11,7 @@ import com.alibaba.android.arouter.launcher.ARouter;
 import com.inke.zcl.learnrxjava.R;
 import com.inke.zcl.learnrxjava.activity.RouterConstans;
 import com.inke.zcl.learnrxjava.design.javaoffer.IQuestion;
-import com.inke.zcl.learnrxjava.design.javaoffer.QuestionSeven;
-import com.inke.zcl.learnrxjava.design.javaoffer.QuickSort;
-import com.inke.zcl.learnrxjava.design.javaoffer.QustionSix_;
-import com.inke.zcl.learnrxjava.design.javaoffer.SearchAndSort;
+import com.inke.zcl.learnrxjava.design.javaoffer.QuestionEight;
 import com.inke.zcl.learnrxjava.view.CustomFatherView;
 
 /**
@@ -58,7 +55,7 @@ public class CustomTextView extends CustomFatherView {
     }
 
     private void textAlgorithm() {
-        IQuestion question = new QuickSort();
+        IQuestion question = new QuestionEight();
         question.main();
     }
 
